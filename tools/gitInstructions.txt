@@ -1,0 +1,40 @@
+GIT and HOW TO resolve stuff
+
+New project-----------------------------------------
+
+1. Go to directory location
+2. git init
+     a. make a .gitignore
+		-https://github.com/github/gitignore
+3. git add . //. means all
+4. git commit -m "..."
+
+Go to github
+1. click new repo
+2. git remote add origin <Input url that Github make>
+	a. Will look something like https://github.com/userName/repoName.git
+4. git push origin master
+
+
+Branching-------------------------------------------
+
+Make a new branch
+	$git branch <name of new branch>
+
+List branches
+	$git branch -a
+	
+Switch to specific branch
+	$git checkout <name of branch>
+	
+Change name of branch
+
+	if you are currently on the branch
+		$git branch -m <new name>
+	if you are one a diff branch
+		$git branch -m <old name> <new name>
+	Delete old name on remote and push new name from local
+		$git push origin :<old name> <new name>
+	Reset the upstream branch for the new name of local
+		$git checkout <old name>
+		$git push origin -u <name name>
