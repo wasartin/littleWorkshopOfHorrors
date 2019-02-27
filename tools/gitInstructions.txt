@@ -1,5 +1,11 @@
 GIT and HOW TO resolve stuff
 
+
+Errors----------------------------------------------
+
+1. src refspec master does not match any when pushing commits in git
+	-You forgot to commit your changes before pushing.
+
 New project-----------------------------------------
 
 1. Go to directory location
