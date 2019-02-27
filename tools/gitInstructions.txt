@@ -29,6 +29,7 @@ Make a new branch
 
 List branches
 	$git branch -a
+	$git branch -vv //list them all and double verbose. (more info)
 	
 Switch to specific branch
 	$git checkout <name of branch>
