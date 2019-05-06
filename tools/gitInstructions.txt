@@ -29,7 +29,6 @@ Make a new branch
 
 List branches
 	$git branch -a
-	$git branch -vv //list them all and double verbose. (more info)
 	
 Switch to specific branch
 	$git checkout <name of branch>
@@ -45,3 +44,52 @@ Change name of branch
 	Reset the upstream branch for the new name of local
 		$git checkout <old name>
 		$git push origin -u <name name>
+
+Merge_Conflicts------------------------------------
+This happens when merge branches have competing commits
+
+1.You want a <branch-1> to have the <branch-2>'s code.
+	
+		$git checkout <branch-1> 	#The one you are on#
+		$git merge <branch-2>		#The one you are trying to add#
+		CONFLICT (content): Merge conflict in <files-that-differ>
+		Automatic merge failed: fix conflicts and then commit the result
+		
+		#Now go to your file, and you will see this.
+			<<<<<<< HEAD
+				// This is the code on <branch-1>
+			=======
+				// This is the code on <branch-2>
+			>>>>>>> javadoc
+		#Pick the code you want, delete the other, and remove the 
+			# '<<<', '===', '>>>'
+		#add, commit, push. Done
+
+Merge_Repos----------------------------------------
+When you want to merge two repos, and keep the history.
+
+1. You want <project-parent> to have <project-child> under it.
+
+	$cd <path-to-'project-parent'>
+	$git remote add <label-you-make-for-'project-child'> <path/to/project-child>
+	$git fetch <label>
+	$git merge --allow-unrelated-histories <label>/master
+	#Fix any conflicts
+	$git add .
+	$git commit -m "<a-great-commit-message>"
+	$git push
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

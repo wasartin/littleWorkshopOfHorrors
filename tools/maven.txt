@@ -1,0 +1,14 @@
+Maven
+
+
+Structure
+	-Groupid
+		This is the identification of the project. unique, not null 
+			For example:
+			com.company.business has all business related projects (vague i know)
+			
+		Think of it as you would with the structuring of your folders. 
+		
+	-artifactID
+		-This is what the jar will be called.
+			
