@@ -1,0 +1,95 @@
+Terminal Stuff cheatsheet
+=========================
+
+
+==================================================================
+----------------------------Linux---------------------------------
+==================================================================
+
+open a tar
+	tar -xvf <file-name>.tar 	
+
+moving a file (Also renaming a file
+	mv <path><filename>
+	mv <path><filename> <target-path><filename>
+		
+output results of command into a text file 
+	<command> > <name>.txt 		#Create file 
+	<command> >> <name>.txt		#Append to an existing file
+	<command> %> <name>.txt		#include stderr & create file
+	<command> %>> <name>.txt	#" & append to file
+	<command> 2>&1 | <name>.txt	#stdrr, output in console & file.
+	
+	
+Man Page Stuff:
+	-----------------------------------------------------------
+	|	MANUAL SECTIONS
+	|		The standard sections of the manual include:
+	|
+	|		1      User Commands
+	|		2      System Calls
+	|		3      C Library Functions
+	|		4      Devices and Special Files
+	|		5      File Formats and Conventions
+	|		6      Games et. al.
+	|		7      Miscellanea
+	|		8      System Administration tools and Daemons
+	|
+	|		Distributions customize the manual section to their 
+	|		specifics, which often include additional sections.	
+	-----------------------------------------------------------
+	So, when you see
+		"Look at readdir(3)"
+	in a man page, it means to go to your terminal and enter
+		$man 3 readdir
+
+getting stuff from files from ssh
+	scp <login>@<hostname>:"<path-to-files" <target-path-on-your
+		-machine>
+==================================================================
+--------------------------Networking------------------------------
+==================================================================
+get a website's IP address
+	dig <website>
+	
+	nslookup <website>
+
+Retrieve content from webserver via CL
+	'wget'
+	
+Listing downloaded stuff
+	grep " install " /var/log/dpkg.log
+	
+Listing recently downloaded stuff
+	awk '$3~/^install$/ {print $4;}' /var/log/dpkg.log
+	
+	
+==================================================================
+-------------------------------C----------------------------------
+==================================================================
+GDB
+	gdb <your-program-executable>
+	break <line #>
+	run <insert-any-args>
+	s 		#step one line of code, goes into functions if needed
+	next	#stepoing into functions
+	print <variable-name>	#shows value
+	
+	EX:
+		gdb rlg327
+		break 443
+		break 580
+		run --load
+
+		
+==================================================================
+----------------------------EMACS---------------------------------
+==================================================================
+	show row/column 
+		(setq column-number-mode t)
+==================================================================
+-----------------------------MISC---------------------------------
+==================================================================		
+Notes about doc.
+ - The columns should be no wider than 67 columns 
+	(fits half my working laptop screen)

@@ -34,7 +34,6 @@ Switch to specific branch
 	$git checkout <name of branch>
 	
 Change name of branch
-
 	if you are currently on the branch
 		$git branch -m <new name>
 	if you are one a diff branch
@@ -86,6 +85,7 @@ When you want to merge two repos, and keep the history.
 
 
 
+/c/Users/watis/ISU/prevClasses/programming/cs319/hw/four
 
 
 
