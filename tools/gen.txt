@@ -1,0 +1,225 @@
+===================================================================================
+----------------------------------------Mac----------------------------------------
+===================================================================================
+	lock screen
+		command-ctrl-q
+	kill
+		commmand-q
+	Task manager Equiv
+		commmand-option-escape
+	view all screens
+		./"swipe up with 3 fingers"
+	For some windows commands, the mac alternative uses command instead of ctrl
+		Find,
+			command+f, etc
+
+Reminders:
+	⌥ : the option key || alt key
+	⌘ : the command key
+
+===================================================================================
+--------------------------------------Terminal-------------------------------------
+===================================================================================
+   execute previous command w/ sudo
+      $sudo !! 	#called "sudo bang bang"
+
+   Opening
+      .tar
+         $tar xopf <file-name>.tar
+      .tar.gz
+	 $tar -zvxf <file-name>.tar.gz <new-name-if-you-want>
+	      #zip, verbose, extract, file
+      .zip
+         $unzip -a <file-name>.zip
+			
+   To get a file into an arg for CL w/o typing
+      $<command> <first few letters of file> tab	
+      	#You can tab again to cycle through files
+      	#Or you could type more of its letters. 
+
+   skip words (First go to terminal->Preferences->Profile->keyboard & select "Use option as Meta key")
+      alt + f 	#(if you don't do that change it is) Esc + f
+      alt + b 	#(") Esc + b
+
+   run previous argument in a different command
+      <command> !$
+         Ex: open <path-to-file-name>.txt
+	    rm !$ 		
+
+   Search all files in a subdirectory for a word
+      $grep -irl "word-or-phrase" .
+         #i = ignore case, r = recursive, l = list file that have it
+	 #. means the currenty directory
+
+   List all files in Directory with more info
+      ls -la
+      #Understanding its output in below
+----------------------------------------------------------------------
+	r:= readable
+	w:= writable
+	x:= executable
+ +-permissions that apply to the owner
+      |
+      |     +-permissions that apply to all other users
+      |     |
+      |     |  +-number of hard links
+      |     |  |
+      |     |  |             +-size      +-last modification date and time
+     _|_   _|_ |            _|__ ________|_______
+    drwxr-xr-x 2 ataka root 4096 2008-11-04 16:58 ataka
+        ___      _____ ____                       _____
+         |         |    |                           |
+         |         |    |                           +-name of file or directory
+         |         |    |
+         |         |    +-the group that the group permissions applies to
+         |         |
+         |         +-owner
+         |
+         +-permissions that apply to users who are members of the group
+---------------------------------------------------------------------
+
+Reminders:
+	~ : your home directory
+	! : bang
+	. : current directory
+
+---------------------------------------------------------------------
+
+=================================================================================
+----------------------------------Language---------------------------------------
+=================================================================================
++-----+
+| XML |
++-----+
+      CDATA:= (Unparsed) Character Data. (<![CDATA[...]]>
+      	   -The elipse between the brackets is a string that could be XML markup
+	   but should not be. 
+	   -Tells the XML parser to not parse this. The example allows entity
+	   reserved characters to be used.
+	   	  EX:[
+			<data><! [CDATA[ a < b]]> </data>
+	          ]
+	   -can be used to put javascript in the xml doc
+	   	  EX:[
+			<script type ="text/javascript">
+			//<![CDATA[
+			document.write("<");
+			//]]>
+			</script>
+		  ]
++------+
+| JAVA |
++------+
+   Short Circuit:
+      if ( false && <Don't care> ) {}
+      if ( true  && <Don't care> ) {}
+
+      if ( true  && Look ) {}
+      if ( false || Look ) {}
+
+
++-------------+
+| JAVASCRIPT  |
++-------------+
+
+   Document
+      -Children vs ChildrenNodes. 
+         a.) childrenNodes contain all nodes, including text nodes, consisting 
+	    entirely of whitespace.
+	 b.) Children is a collection of child nodes taht are elts 
+
+
+=================================================================================
+------------------------------------Eclipse--------------------------------------
+=================================================================================
+eclipse & other tips
+   show an open file in package explorer
+      -> On the package explorer in the top right is a arrow pointing down which 
+         opens a drop-down window. Select 'link with editor'
+
+   save all files
+      -> shit + command + s
+
+   How to find out what the page name is:
+      1. Nav to desired page on local branch on lwr level sites
+      2.Inspect page and search for "Current page name:"
+      3. Copy the page name & search for it in pages.xml
+
+   Open a file in Eclipse:
+      -> Command + Shift + r
+
+   Open a file in Eclipse (only searches Java Classes)
+      ->Cmd + shit + T (you can use *, like cov*hist*lo or *loader)
+	(can also search with capitoal letters. CoverageHistoryLoader is 'CHL')
+
+   Search for something project wide in eclipse
+      ->Ctrl + h
+
+   Delete curr line in Eclipse
+      ->cmd + d
+
+   see where curr func is called in eclipse
+      ->[Highlight Func] hit Cmd + shit + g
+   Move curr line of code up/down
+      ->Alt + up/down
+
+   Quick view of curr elt
+      1. when you right-click and hit inspect elt on chrom, you will see a ==$0
+	(or 1, or 2)
+	type in $0 in console and it will show that spec elt in console
+
+   View XML that is loaded on page
+      1. Hit 'Run', 'Debug Configurations' -> your localhost -> args -> VM args 
+	(paste this: DxmlLog=/Users/FILE_PATH/View.xml ) -> apply
+      2. then exml will be sput out onto the file
+
+   Un-min-i-fy-files
+      open up presentation.sxl
+      search for .min (only one)
+      delete everything inside the select so it lookes liks 
+         <xsl:variable name="min" select=""/>
+      (Also inspect has a '{}' above the console that beautifies the doc
+=================================================================================
+------------------------------------Emacs----------------------------------------
+=================================================================================
+Note: Nothing will beat the link, but I'll list stuff that I keep forgetting
+https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf
+
+   show column (until I write a lisp for it)
+      -> M-x 
+      -> [type] column-number-mode
+
+
+
+
+
+
+-----------------------------------------------------------------------------------
+
+
+TODO:
+	A way to read a docx in terminal would be great
+		?strings <file-name>.docx | less # need xcode
+
+	Run Sublime in the terminal, like emacs in linux.
+		1. This might do it, but I need sudo
+			https://www.sublimetext.com/docs/3/osx_command_line.html
+
+LU:
+	ln : think link. there is a lot here, just do man. It 'points' to other files. It seems pretty cool
+==========================================
+
+Maven
+
+
+Structure
+	-Groupid
+		This is the identification of the project. unique, not null 
+			For example:
+			com.company.business has all business related projects (vague i know)
+			
+		Think of it as you would with the structuring of your folders. 
+		
+	-artifactID
+		-This is what the jar will be called.
+			
