@@ -3,10 +3,10 @@
 ## General Articles
 * Web
     * Articles
-        * [Anatomy of the URL] (https://doepud.co.uk/blog/anatomy-of-a-url)
-        * [URL Definitions according to Google] (https://www.mattcutts.com/blog/seo-glossary-url-definitions/)
+        * [Anatomy of the URL](https://doepud.co.uk/blog/anatomy-of-a-url)
+        * [URL Definitions according to Google](https://www.mattcutts.com/blog/seo-glossary-url-definitions/)
     * Papers 
-        * [Disseration on Rest by Roy T. Fielding] (https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)
+        * [Disseration on Rest by Roy T. Fielding](https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)
 
 
 ## SO
