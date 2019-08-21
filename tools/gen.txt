@@ -116,6 +116,19 @@ Reminders:
 
       if ( true  && Look ) {}
       if ( false || Look ) {}
+	--- Junit ---
+	   @Annotations
+	      -Before(j4)/BeforeEach(j5):= Executed before each test.
+	      -BeforeClass(j4)/BeforeAll(j5):= runs once before the entire class.
+	      -
+
+	--- Mockito ---
+	   How to best Mock an Inner class
+	      OuterClass.InnerClass name = Mock.spy(new OuterClass.InnerClass());
+
+	   How to Mock a call but verify that it still happened
+	      Mockito.doNothing().when(name).methodCall(Mockito.matchArgumentMethod());
+	      Mockito.verify(classInstance, Mockito.atMost(1)).methodCall(Mockito.matchArgumentMethod());    
 
 
 +-------------+
