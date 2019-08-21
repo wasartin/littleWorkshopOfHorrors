@@ -4,6 +4,7 @@
 https://stackoverflow.com/a/5280719
 https://stackoverflow.com/questions/5226055/truly-understanding-the-difference-between-procedural-and-functional
 > **Functional Programming**
+> 
 > Functional programming refers to the ability to treat functions as values.
 > Let's consider an analogy with "regular" values.  We can take two integer values and combine them using the `+` operator to > obtain a new integer.  Or we can multiply an integer by a floating point number to get a floating point number.
 > In functional programming, we can combine two function values to produce a new function value using operators like [compose][1] or [lift][2].  Or we can combine a function value and a data value to produce a new data value using operators like [map][3] or [fold][4].
@@ -28,9 +29,9 @@ https://stackoverflow.com/questions/5226055/truly-understanding-the-difference-b
       return apply(and, map(compose(odd, length), words));
     }
 > Working from the inside out, this definition does the following things:
- 1. `compose(odd, length)` combines the `odd` and `length` functions to produce a new function that determines whether the length of a string is odd.
- 2. `map(..., words)` calls that new function for each element in `words`, ultimately returning a new list of boolean values, each indicating whether the corresponding word has an odd number of characters.
- 3. `apply(and, ...)` applies the "and" operator to the resulting list, *and*-ing all of the booleans together to yield the final result.
+>  1. `compose(odd, length)` combines the `odd` and `length` functions to produce a new function that determines whether the length of a string is odd.
+>  2. `map(..., words)` calls that new function for each element in `words`, ultimately returning a new list of boolean values, each indicating whether the corresponding word has an odd number of characters.
+>  3. `apply(and, ...)` applies the "and" operator to the resulting list, *and*-ing all of the booleans together to yield the final result.
 > You can see from these examples that procedural programming is very concerned with moving values around in variables and explicitly describing the operations needed to produce the final result.  In contrast, the functional style emphasizes the combination of functions required to transform the initial input to the final output.
 > The example also shows the typical relative sizes of procedural versus functional code.  Furthermore, it demonstrates that the performance characteristics of procedural code might be easier to see than that of functional code.  Consider: do the functions compute the lengths of all of the words in the list, or does each stop immediately after finding the first even length word?  On the other hand, the functional code permits a high-quality implementation to perform some pretty serious optimization since it primarily expresses intent rather than an explicit algorithm.
 > **Further Reading**
