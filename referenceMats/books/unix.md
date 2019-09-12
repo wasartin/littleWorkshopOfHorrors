@@ -1,0 +1,174 @@
+# Notes from Unix Philosophy and The Cathedral vs the Bazaar
+
+### 17 Rules of Unix Programming Philosophy 
+01. Modularity: Write simple parts connected by clean interfaces.
+
+02. Clarity: Clarity is better than cleverness.
+
+03. Composition: Design programs to be connected to other programs.
+
+04. Separation: Separate policy from mechanism; separate interfaces from engines.
+
+05. Simplicity: Design for simplicity; add complexity only where you must.
+
+06. Parsimony: Write a big program only when it is clear by demonstration that nothing else will do.
+
+07. Transparency: Design for visibility to make inspection and debuggingeasier.
+ 
+08. Robustness: Robustness is the child of transparency and simplicity.
+
+09. Representation: Fold knowledge into data so program logic can be stupid and robust.
+
+10. Least Surprise: In interface design, always do the least surprising thing.
+
+11. Silence: When a program has nothing surprising to say, it should say nothing.
+
+12. Repair: When you must fail, fail noisily and as soon as possible.
+
+13. Economy: Programmer time is expensive; conserve it in preference to machine time.
+
+14. Generation: Avoid hand-hacking; write programs to write programs when you can.
+
+15. Optimization: Prototype before polishing. Get it working before you optimize it.
+
+16. Diversity: Distrust all claims for “one true way”.
+
+17. Extensibility: Design for the future, because it will be here sooner than you think.
+
+
+### Summary of Catherdral vs Bazaar:
+
+Abstract
+Cathedral:= model of commercial world
+Bazaar:= model of linux world. 
+Listing loosely correlated theories & ideas.
+The Cathedral & the Bazaar
+Linux an inherent tendency to destabilize the established system.
+‘Hacked’ together by a multitude of remote devs
+The writer was already well-established in the world of Unixs. 
+He essentially had the previous idea that large important systems needed a ‘waterfall’ method. As opposed to Linux’s 
+“release early & often”
+“Delegate everything you can”
+“Be open to the point of promiscuity”
+Which he equates to a Bazaar, a large babbling group of people.
+The Bazaar is shockingly effective. & the Linux Env provides a wonderful foundation for good software.
+The Mail Must Get Through
+More Credible, he lists some software project he worked on.
+Lesson 1 “Every good work of software starts by scratching a developer’s personal itch”
+He wanted access to his work email from home.
+Lesson 2 “ Good programmers know what to write. Great ones know what to rewire (& reuse)”
+Linus didn’t start from scratch, he started by recycling code & ideas that a mini unix operating system had. It was a scaffolding for the linux that would be.
+He did the same. Used someone elses code.
+Lesson 3: “Plan to throw one away: you will anyhow.” (Fred Brooks. The MMM)
+His current code base had some issues, so he went off to work on someone elses. But that person lost interest, so he took over. 
+Lesson 4: “If you have the right attitude, interesting problems will find you.”
+He went from just doing patches to taking over a code base.
+Lesson 5: “When you lose interest in a program, your last duty to it is to hand it off to a competent successor.” 
+Which his pop client’s predecessor understand.
+The Importance of Having Users.
+Linux has a tendency of it’s users also being developers. Who can identify problems/bugs and propose or implement fixes. 
+Lesson 6: “Treating your users as co-developers is your least-hassle route to rapid code improvement & effective debugging.”
+He is more impressed with Linux’s development model than the Linux Kernel itself. Upon noting this to Linux he responded “I’m basically a very lazy person who likes to get credit for things other people actually do.” 
+Emacs Lisp seems to have followed a similar development style. 
+Release Early, Release Often
+Lesson 7: “Release early. Release often. And listen to your consumers.”
+Some kernel versions were being released more than one a day. 
+Linus comes across as a genius in engineering & implementation.
+Linus was rewarded his developers by the constant improvement in their work. 
+Lesson 8: “GIven a large enough beta-tester and co-developer base, almost every problem will be characterized quickly and the fix obvious to someone.”
+I.e. Linus’s Law “Given enough eyeballs, all bugs are shallow”
+Aka “Debugging is parallelizable” - Jeff Dutky
+“More users find more bugs.” - Fred Brooks (MMM)
+One person can find the bug, and another can fix it.
+In the “waterfall” world of Cathedral building, the long releases are supposed to coincide with no bugs since they identified them. But in reality since only a few people were working on bug detection, this style of development results in most bugs being found upon actual release. 
+Talks about the Delphi Method aka “Estimate - Talk - Estimate (ETE)”. Which is the prediction of something from a panel of experts is often more reliable than any one individual expert. 
+When is a Rose not a Rose?
+Now he is going to test his theory on his new project. After refactoring some of the popclient.
+Lesson 9: “Smart data structures and dumb code works a lot better than the other way around”
+“Show me your [code] & conceal your [data structures], and I shall continue to be mystified. Show me your [data structures], and I won’t usually need your [code]; it’ll be obvious.” - Fred Brooks (MMM) on ‘flowcharts’ & ‘tables’ respectively.
+His implementation
+Release Early & Often
+Grew testers to everyone/anyone that inquired about fetchmail
+Sent out announcements/update to users when releasing a new version. Also encouraged users to help.
+Listened to the users, polled them, and thanking/complimenting them when they did any work or gave feedback. 
+Received incredible results.
+Lesson 10: “If you treat your beta-testers as if they’re your most valuable resource, they will respond by becoming your most valuable resource.” 
+The application worked so well that people requested to be off the mailing list of updates.
+Popclient becomes Fetchmail
+Lesson 11: “The next best thing to having good ideas is recognizing good ideas from your users. Sometimes the latter is better.” 
+Lesson 12: “Often, the most striking and innovative solutions come from realizing that your concept of the problem was wrong.” 
+He cut away a lot of the functionality after this which yielding a more robust application.  Performance improved, errors went away. The manual became better. 
+Lesson 13: “Perfection (in design) is achieved not when there is nothing more to add, but rather when there is nothing more to take away.” 
+‘Exploration essentially by diffusion, followed by exploitation mediated by a scalable communication mechanism.’ 
+Don’t be too focused in on see such that you don’t miss the real prize.
+Fetchmail Grows Up.
+Talks about implementing a feature people have been asking for. A multidrop
+Lesson 14: “Any tool should be useful in the expected way, but a truly great tool lend itself to uses you never expected.”
+Lesson 15: “When writing gateway software of any kind, take pains to disturb the data stream as little as possible - and *never* throw away information unless the recipient forces you to!”
+This made the added MIME support something a lot easier to implement. 
+A Few More Lessons From Fetchmail.
+Lesson 16: “When your language is nowhere near Turing-complete, syntactic sugar can be your friend.
+Security by Obscurity
+Lesson 17: “A security system is only as secure as its secret. Beware of pseudo-secrets.”
+Necessary Preconditions for the Bazaar Style
+Don’t start with a Bazaar style of coding. Linus didn’t do it and neither should others. 
+If plausible promise is present then community building is allowed. 
+It should compile & convince others it has potential.
+The Coordinator must “recognize good design ideas from others.” 
+Must also be a good working with ‘peopleware’. 
+The Social Context of Open-Source Software.
+Lesson 18: “To solve an interesting problem, start by finding a problem that is interesting to you.”
+In a software world where programmers are not territorial, the software becomes much better. 
+The dev in the closed environment will not do as well as the dev in an open environment. Due to feedback, bug hunts, code from another dev, and other general improvements. 
+“... the aim can be achieved only through the severe effort of many converging wills.” - Pyotr Alexeyvich Kropotkin’s Memoirs of a Revolutionist.  
+The idea of a commanding style of leaders does not work well in a pool of volunteers. 
+Apparently there was good documentation at this time. 
+Lesson 19: “Provided the development coordinator has a medium at least as good as the Internet, and knows how to lead without coercion, many heads are inevitably better than one. “
+End with Open-Source Software Domination
+On Management and the Maginot Line (update)
+Some arguments have been raised that open source projects can’t deliver because they have a tendency to be short-lived. 
+He puts forth the example that Emacs is from a bunch of random people and it is still sustained. 
+He retorts with “what is management overhead buying?” Someone he knows lists 5 things.
+“Software Project Management has 5 functions”
+To define goals & keep everybody pointed in the same direction.
+Both Emacs and Linux seem fine. 
+To monitor & make sure crucial details don’t get skipped.
+The decentralized peer review works quite well. 
+To motivate people to do boring but necessary drudgework.
+Open source people motivate themselves (seems like a weak argument) 
+To organize the deployment of people for best productivity
+Open source people organize themselves.
+To marshal resources needed to sustain the project. 
+Open source projects die when they lose interest, not due to lack of resources or equipment. 
+He follows up with a retort about how people in the waterfall process hate the process. 
+Closes with “Enjoyment predicts efficiency”
+“Human beings generally take pleasure in a task when it falls in a sort of optimal-challenge zone; not so easy as to be boring, not too hard to achieve. A happy programmer is one who is neither under- 31 utilized nor weighed down with ill-formulated goals and stressful process friction.”
+Acknowledgements
+Thanks people
+For Further Reading
+MMM (later edition)
+Gerald M. Weinberg’s The Psychology Of Computer Programming
+De Marco and Lister’s Peopleware: Productive Projects and Teams (I own this!)
+Epilog: Netscape Embraces the Bazaar
+Netscape became Mozilla? I didn’t know that. 
+Endnotes
+Jon Bentley comments on Brooks’s observation with “If you plan to throw one away, you will throw away two.”
+The idea that starting over with the right idea is more effective than trying to salvage a mess
+“John Hasler has suggested an interesting explanation for the fact that duplication of e:ort doesn’t seem to be a net drag on opensource development. He proposes what I’ll dub “Hasler’s Law”: the costs of duplicated work tend to scale sub-qadratically with team size – that is, more slowly than the planning and management overhead that would be needed to eliminate them.”
+I don’t know what this means, but I am just putting it here to decipher it later. 
+“Wake me up when it’s done.” Is better than forcing code out premature. 
+“Insight comes from individuals” 
+Hoards of people do not come up with good ideas. As well as the committees of people in a corporate setting. 
+It is an ideal “to be responsive to breakthrough insights. To nourish and reward them, and rigorously test them instead of squashing them.”
+“Cathedrals and bazaars and other social structures can catch lighting and refine it, but they cannot make it on demand.” 
+Experimental GNU Complier System
+Follow Cathedral for GCC
+Follow Bazaar for EGC
+EGC won in the end, was better, had more features, etc. 
+“Organizations which design systems are constrained to produce designs which are copies of the communication structures of these organizations.” - Conway’s Law.
+I.e.
+“The means determine the ends”
+“Process becomes product”.
+“True communication is possible only between equals, because inferiors are more consistently rewarded for telling their superiors pleasant lies than for telling the truth.” - SNAFU Principle.
+Much Better Close 
+“The way this plays out in conventional software development is easy to see; there are strong incentives for the inferiors to hide, ignore, and minimize problems. When this process becomes product, software is a disaster. “
