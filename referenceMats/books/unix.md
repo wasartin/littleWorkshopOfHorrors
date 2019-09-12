@@ -38,73 +38,65 @@
 
 ### Summary of Catherdral vs Bazaar:
 
-Abstract
-Cathedral:= model of commercial world
-Bazaar:= model of linux world. 
-Listing loosely correlated theories & ideas.
-The Cathedral & the Bazaar
-Linux an inherent tendency to destabilize the established system.
-‘Hacked’ together by a multitude of remote devs
-The writer was already well-established in the world of Unixs. 
-He essentially had the previous idea that large important systems needed a ‘waterfall’ method. As opposed to Linux’s 
-“release early & often”
-“Delegate everything you can”
-“Be open to the point of promiscuity”
-Which he equates to a Bazaar, a large babbling group of people.
-The Bazaar is shockingly effective. & the Linux Env provides a wonderful foundation for good software.
-The Mail Must Get Through
-More Credible, he lists some software project he worked on.
-Lesson 1 “Every good work of software starts by scratching a developer’s personal itch”
-He wanted access to his work email from home.
-Lesson 2 “ Good programmers know what to write. Great ones know what to rewire (& reuse)”
-Linus didn’t start from scratch, he started by recycling code & ideas that a mini unix operating system had. It was a scaffolding for the linux that would be.
-He did the same. Used someone elses code.
-Lesson 3: “Plan to throw one away: you will anyhow.” (Fred Brooks. The MMM)
-His current code base had some issues, so he went off to work on someone elses. But that person lost interest, so he took over. 
-Lesson 4: “If you have the right attitude, interesting problems will find you.”
-He went from just doing patches to taking over a code base.
-Lesson 5: “When you lose interest in a program, your last duty to it is to hand it off to a competent successor.” 
-Which his pop client’s predecessor understand.
-The Importance of Having Users.
-Linux has a tendency of it’s users also being developers. Who can identify problems/bugs and propose or implement fixes. 
-Lesson 6: “Treating your users as co-developers is your least-hassle route to rapid code improvement & effective debugging.”
-He is more impressed with Linux’s development model than the Linux Kernel itself. Upon noting this to Linux he responded “I’m basically a very lazy person who likes to get credit for things other people actually do.” 
-Emacs Lisp seems to have followed a similar development style. 
-Release Early, Release Often
-Lesson 7: “Release early. Release often. And listen to your consumers.”
-Some kernel versions were being released more than one a day. 
-Linus comes across as a genius in engineering & implementation.
-Linus was rewarded his developers by the constant improvement in their work. 
-Lesson 8: “GIven a large enough beta-tester and co-developer base, almost every problem will be characterized quickly and the fix obvious to someone.”
+- Abstract
+* Cathedral:= model of commercial world
+* Bazaar:= model of linux world. 
+* Listing loosely correlated theories & ideas.
+
+-The Cathedral & the Bazaar
+* Linux an inherent tendency to destabilize the established system.
+* ‘Hacked’ together by a multitude of remote devs
+* The writer was already well-established in the world of Unixs. 
+* He essentially had the previous idea that large important systems needed a ‘waterfall’ method. As opposed to Linux’s 
+* “release early & often”
+* “Delegate everything you can”
+* “Be open to the point of promiscuity”
+* Which he equates to a Bazaar, a large babbling group of people.
+* The Bazaar is shockingly effective. & the Linux Env provides a wonderful foundation for good software.
+
+- The Mail Must Get Through
+* More Credible, he lists some software project he worked on.
+* Lesson 1 “Every good work of software starts by scratching a developer’s personal itch”
+* He wanted access to his work email from home.
+* Lesson 2 “ Good programmers know what to write. Great ones know what to rewire (& reuse)”
+* Linus didn’t start from scratch, he started by recycling code & ideas that a mini unix operating system had. It was a scaffolding for the linux that would be.
+* He did the same. Used someone elses code.
+* Lesson 3: “Plan to throw one away: you will anyhow.” (Fred Brooks. The MMM)
+* His current code base had some issues, so he went off to work on someone elses. But that person lost interest, so he took over. 
+* Lesson 4: “If you have the right attitude, interesting problems will find you.”
+* He went from just doing patches to taking over a code base.
+* Lesson 5: “When you lose interest in a program, your last duty to it is to hand it off to a competent successor.” 
+* hich his pop client’s predecessor understand.
+
+- The Importance of Having Users.
+* Linux has a tendency of it’s users also being developers. Who can identify problems/bugs and propose or implement fixes. 
+* Lesson 6: “Treating your users as co-developers is your least-hassle route to rapid code improvement & effective debugging.”
+* He is more impressed with Linux’s development model than the Linux Kernel itself. Upon noting this to Linux he responded * “I’m basically a very lazy person who likes to get credit for things other people actually do.” 
+* Emacs Lisp seems to have followed a similar development style. 
+
+- Release Early, Release Often
+07. Lesson 7: “Release early. Release often. And listen to your consumers.”
+
+08. Guven a large enough beta-tester and co-developer base, almost every problem will be characterized quickly and the fix obvious to someone.”
 I.e. Linus’s Law “Given enough eyeballs, all bugs are shallow”
 Aka “Debugging is parallelizable” - Jeff Dutky
 “More users find more bugs.” - Fred Brooks (MMM)
 One person can find the bug, and another can fix it.
-In the “waterfall” world of Cathedral building, the long releases are supposed to coincide with no bugs since they identified them. But in reality since only a few people were working on bug detection, this style of development results in most bugs being found upon actual release. 
-Talks about the Delphi Method aka “Estimate - Talk - Estimate (ETE)”. Which is the prediction of something from a panel of experts is often more reliable than any one individual expert. 
-When is a Rose not a Rose?
-Now he is going to test his theory on his new project. After refactoring some of the popclient.
-Lesson 9: “Smart data structures and dumb code works a lot better than the other way around”
+
+09. “Smart data structures and dumb code works a lot better than the other way around”
 “Show me your [code] & conceal your [data structures], and I shall continue to be mystified. Show me your [data structures], and I won’t usually need your [code]; it’ll be obvious.” - Fred Brooks (MMM) on ‘flowcharts’ & ‘tables’ respectively.
-His implementation
-Release Early & Often
-Grew testers to everyone/anyone that inquired about fetchmail
-Sent out announcements/update to users when releasing a new version. Also encouraged users to help.
-Listened to the users, polled them, and thanking/complimenting them when they did any work or gave feedback. 
-Received incredible results.
-Lesson 10: “If you treat your beta-testers as if they’re your most valuable resource, they will respond by becoming your most valuable resource.” 
-The application worked so well that people requested to be off the mailing list of updates.
-Popclient becomes Fetchmail
-Lesson 11: “The next best thing to having good ideas is recognizing good ideas from your users. Sometimes the latter is better.” 
-Lesson 12: “Often, the most striking and innovative solutions come from realizing that your concept of the problem was wrong.” 
-He cut away a lot of the functionality after this which yielding a more robust application.  Performance improved, errors went away. The manual became better. 
-Lesson 13: “Perfection (in design) is achieved not when there is nothing more to add, but rather when there is nothing more to take away.” 
+
+10. Lesson 10: “If you treat your beta-testers as if they’re your most valuable resource, they will respond by becoming your most valuable resource.” 
+
+11. Lesson 11: “The next best thing to having good ideas is recognizing good ideas from your users. Sometimes the latter is better.” 
+12. Lesson 12: “Often, the most striking and innovative solutions come from realizing that your concept of the problem was wrong.” 
+
+13. Lesson 13: “Perfection (in design) is achieved not when there is nothing more to add, but rather when there is nothing more to take away.” 
 ‘Exploration essentially by diffusion, followed by exploitation mediated by a scalable communication mechanism.’ 
 Don’t be too focused in on see such that you don’t miss the real prize.
-Fetchmail Grows Up.
-Talks about implementing a feature people have been asking for. A multidrop
-Lesson 14: “Any tool should be useful in the expected way, but a truly great tool lend itself to uses you never expected.”
-Lesson 15: “When writing gateway software of any kind, take pains to disturb the data stream as little as possible - and *never* throw away information unless the recipient forces you to!”
+
+14. Lesson 14: “Any tool should be useful in the expected way, but a truly great tool lend itself to uses you never expected.”
+15. Lesson 15: “When writing gateway software of any kind, take pains to disturb the data stream as little as possible - and *never* throw away information unless the recipient forces you to!”
 This made the added MIME support something a lot easier to implement. 
 A Few More Lessons From Fetchmail.
 Lesson 16: “When your language is nowhere near Turing-complete, syntactic sugar can be your friend.
