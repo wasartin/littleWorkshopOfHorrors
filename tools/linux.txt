@@ -83,7 +83,20 @@ Listing recently downloaded stuff
 	i <type-text> <ESC>	insert before cursor & return to 
 		 		 	normal mode
 	a <type-text> <ESC>	append after line
+5. delete
+	dw	#delete from cursor to next work
+	d$	#delete from cursor to end of line
+	dd	#delete whole line
 
+6. Motion
+	2w	#repeat the word motion 2 types
+		#<operator> <number> <motion>
+	0	#move to start of a line
+
+7. Undo
+	u	#undo previous action
+	U	# undo all changes on a line
+	<CTRL-R>#undo the undo
 	
 ==================================================================
 -------------------------------C----------------------------------
