@@ -63,6 +63,27 @@ Listing downloaded stuff
 Listing recently downloaded stuff
 	awk '$3~/^install$/ {print $4;}' /var/log/dpkg.log
 	
+==================================================================
+-------------------------------VIM--------------------------------
+==================================================================
+
+1. The cursor is moved using either the arrow keys or the hjkl
+	keys.
+	     ^
+             k
+	<h	l>
+	     j
+
+2. vim <file-name> <ENTER>
+
+3. exit vim
+	<ESC> :q! <ENTER>	to quit w/o saving
+	<ESC> :wq <ENTER>	save & quit
+4. insert or append
+	i <type-text> <ESC>	insert before cursor & return to 
+		 		 	normal mode
+	a <type-text> <ESC>	append after line
+
 	
 ==================================================================
 -------------------------------C----------------------------------
