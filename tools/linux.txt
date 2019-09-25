@@ -7,18 +7,23 @@ Terminal Stuff cheatsheet
 ==================================================================
 
 open a tar
-	tar -xvf <file-name>.tar 	
+	$tar -xvf <file-name>.tar 	
 
 moving a file (Also renaming a file
-	mv <path><filename>
-	mv <path><filename> <target-path><filename>
+	$mv <path><filename>
+	$mv <path><filename> <target-path><filename>
+	
+hide the present working directory path
+	$export PS1='\u@\h: '	#this is temp
+	#Or you can put the new line into the ~/.bashrc file
+	$PS1='${debian_chroot:+($debian_chroot)}\u@\h: \W\$ '
 		
 output results of command into a text file 
-	<command> > <name>.txt 		#Create file 
-	<command> >> <name>.txt		#Append to an existing file
-	<command> %> <name>.txt		#include stderr & create file
-	<command> %>> <name>.txt	#" & append to file
-	<command> 2>&1 | <name>.txt	#stdrr, output in console & file.
+	$<command> > <name>.txt 	#Create file 
+	$<command> >> <name>.txt	#Append to an existing file
+	$<command> %> <name>.txt	#include stderr & create file
+	$<command> %>> <name>.txt	#" & append to file
+	$<command> 2>&1 | <name>.txt	#stdrr, output in console & file.
 	
 	
 Man Page Stuff:
