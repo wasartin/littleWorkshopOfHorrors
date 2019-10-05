@@ -87,6 +87,27 @@ GDB
 ==================================================================
 	show row/column 
 		(setq column-number-mode t)
+
+
+==================================================================
+-----------------------------GDB----------------------------------
+==================================================================
+
+reference:= https://www.howtoforge.com/tutorial/how-to-debug-c-programs-in-linux-using-gdb/
+
+open terminal
+   $gdb <your program executable>
+   $break <whatever line you want to break at> 
+   $run <arguments>
+   $s #step one line of code, going into functions if needed
+   $next #step without going into functions
+   $print <variableName> #this is to see the value
+
+   #Example 
+   $gdb rlg327
+   $break 443
+   $break 580
+   $run --load
 ==================================================================
 -----------------------------MISC---------------------------------
 ==================================================================		
