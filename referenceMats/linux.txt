@@ -46,6 +46,13 @@ Man Page Stuff:
 getting stuff from files from ssh
 	scp <login>@<hostname>:"<path-to-files" <target-path-on-your
 		-machine>
+		
+transfer stuff from your computer into another
+	#go to the directory of the stuff you have
+	$sftp username@hostname
+	#go to the directory you want the stuff to
+	$put something.tar
+	#should be good. try to make the file a .tar or something
 ==================================================================
 --------------------------Networking------------------------------
 ==================================================================
