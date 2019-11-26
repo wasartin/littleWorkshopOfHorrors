@@ -1,7 +1,7 @@
 # Quotes
 
 > “When in doubt, use brute Force” 
->> - Ken Thompson
+-Ken Thompson
 
 > “Nine women cannot make a baby in a month” 
 >> - MMM
