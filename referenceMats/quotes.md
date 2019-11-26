@@ -1,10 +1,10 @@
 # Quotes
 
 > “When in doubt, use brute Force” 
--Ken Thompson
+> -- <cite>Ken Thompson</cite>
 
 > “Nine women cannot make a baby in a month” 
->> - MMM
+> --<cite>MMM</cite>
 
 > “If you think experts are expensive, wait and see what amateurs will cost you”
 >> - ?
