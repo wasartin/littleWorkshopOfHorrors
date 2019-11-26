@@ -94,6 +94,19 @@ open terminal
    
   https://cal-linux.com/tutorials/vectors.html
 
+Running gdb that requires User Input : using two terminals
+   #On Terminal 1
+      $./programName
+   #On Terminal 2
+      $ps -a | grep programName	    #Displays the PID
+   #On Terminal 2
+      $gdb -p <PID>
+     
+Valgrind Debugging
+   #Good to know switches
+   $valgrind -v --track-origins=yes --show-leak-kinds=all --leak-check=full --log-file=valgrind.log ./programName
+      #v:= verbose
+      #--log-file=<arg>:=Valgrind sends all of its messages to the spec file
 ==================================================================
 ----------------------------EMACS---------------------------------
 ==================================================================
