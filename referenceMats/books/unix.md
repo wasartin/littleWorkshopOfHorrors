@@ -1,5 +1,7 @@
-# Notes from Unix Philosophy and The Cathedral vs the Bazaar
+# Notes from Eric Raymond
+## The Art of UNIX Programming and The Cathedral vs the Bazaar
 
+## The Art of UNIX Programming
 ### 17 Rules of Unix Programming Philosophy 
 01. **Modularity**: Write simple parts connected by clean interfaces.
 
@@ -36,8 +38,32 @@
 17. **Extensibility**: Design for the future, because it will be here sooner than you think.
 
 
-### Summary of Catherdral vs Bazaar:
+## The Cathedral and the Bazaar (essay with 1999 update)
 
+## Lessons 
+Lessons
+01. **Lesson 1**: “Every good work of software starts by scratching a developer’s personal itch”
+02. **Lesson 2**: “ Good programmers know what to write. Great ones know what to rewire (& reuse)”
+03. **Lesson 3**: “Plan to throw one away: you will anyhow.” (Fred Brooks. The MMM)
+04. **Lesson 4**: “If you have the right attitude, interesting problems will find you.”
+05. **Lesson 5**: “When you lose interest in a program, your last duty to it is to hand it off to a competent successor.” 
+07. **Lesson 7**: “Release early. Release often. And listen to your consumers.”
+08. **Lesson 8**:Given a large enough beta-tester and co-developer base, almost every problem will be characterized quickly and the fix obvious to someone.”
+09. **Lesson 9**: “Smart data structures and dumb code works a lot better than the other way around”
+“Show me your [code] & conceal your [data structures], and I shall continue to be mystified. Show me your [data structures], and I won’t usually need your [code]; it’ll be obvious.” - Fred Brooks (MMM) on ‘flowcharts’ & ‘tables’ respectively.
+10. **Lesson 10**: “If you treat your beta-testers as if they’re your most valuable resource, they will respond by becoming your most valuable resource.”
+11. **Lesson 11**: “The next best thing to having good ideas is recognizing good ideas from your users. Sometimes the latter is better.” 
+12. **Lesson 12**: “Often, the most striking and innovative solutions come from realizing that your concept of the problem was wrong.” 
+13. **Lesson 13**: “Perfection (in design) is achieved not when there is nothing more to add, but rather when there is nothing more to take away.”
+14. **Lesson 14**: “Any tool should be useful in the expected way, but a truly great tool lend itself to uses you never expected.
+15. **Lesson 15**: “When writing gateway software of any kind, take pains to disturb the data stream as little as possible - and *never* throw away information unless the recipient forces you to!”
+16. **Lesson 16**: “When your language is nowhere near Turing-complete, syntactic sugar can be your friend.
+17. **Lesson 17**: “A security system is only as secure as its secret. Beware of pseudo-secrets.”
+18. **Lesson 18** : “To solve an interesting problem, start by finding a problem that is interesting to you.”
+19. **Lesson 19**: “Provided the development coordinator has a medium at least as good as the Internet, and knows how to lead without coercion, many heads are inevitably better than one."
+
+
+### Notes while reading Catherdral vs Bazaar by Eric Raymond:
 - Abstract
   * Cathedral:= model of commercial world
   * Bazaar:= model of linux world. 
@@ -70,20 +96,25 @@
 
 - The Importance of Having Users.
   * Linux has a tendency of it’s users also being developers. Who can identify problems/bugs and propose or implement fixes. 
-  * Lesson 6: “Treating your users as co-developers is your least-hassle route to rapid code improvement & effective debugging.”
+  * **Lesson 6**: “Treating your users as co-developers is your least-hassle route to rapid code improvement & effective debugging.”
   * He is more impressed with Linux’s development model than the Linux Kernel itself. Upon noting this to Linux he responded * “I’m basically a very lazy person who likes to get credit for things other people actually do.” 
   * Emacs Lisp seems to have followed a similar development style. 
 
 - Release Early, Release Often
-07. Lesson 7: “Release early. Release often. And listen to your consumers.”
 
-08. Guven a large enough beta-tester and co-developer base, almost every problem will be characterized quickly and the fix obvious to someone.”
+07. **Lesson 7**: “Release early. Release often. And listen to your consumers.”
+
+08. **Lesson 8**:Given a large enough beta-tester and co-developer base, almost every problem will be characterized quickly and the fix obvious to someone.”
+
 I.e. Linus’s Law “Given enough eyeballs, all bugs are shallow”
-Aka “Debugging is parallelizable” - Jeff Dutky
-“More users find more bugs.” - Fred Brooks (MMM)
-One person can find the bug, and another can fix it.
+Aka 
+> “Debugging is parallelizable” -- <cite>Jeff Dutky</cite>
 
-09. “Smart data structures and dumb code works a lot better than the other way around”
+> “More users find more bugs.” -- <cite>Fred Brooks (MMM)</cite>
+
+* One person can find the bug, and another can fix it.
+
+09. **Lesson 9**: “Smart data structures and dumb code works a lot better than the other way around”
 “Show me your [code] & conceal your [data structures], and I shall continue to be mystified. Show me your [data structures], and I won’t usually need your [code]; it’ll be obvious.” - Fred Brooks (MMM) on ‘flowcharts’ & ‘tables’ respectively.
 
 10. **Lesson 10**: “If you treat your beta-testers as if they’re your most valuable resource, they will respond by becoming your most valuable resource.” 
@@ -107,8 +138,6 @@ Don’t be too focused in on see such that you don’t miss the real prize.
 
 - Security by Obscurity
 17. **Lesson 17**: “A security system is only as secure as its secret. Beware of pseudo-secrets.”
-
-
 
 - Necessary Preconditions for the Bazaar Style
   * Don’t start with a Bazaar style of coding. Linus didn’t do it and neither should others. 
@@ -166,6 +195,7 @@ Don’t be too focused in on see such that you don’t miss the real prize.
   * Jon Bentley comments on Brooks’s observation with “If you plan to throw one away, you will throw away two.”
   * The idea that starting over with the right idea is more effective than trying to salvage a mess
 > “John Hasler has suggested an interesting explanation for the fact that duplication of e:ort doesn’t seem to be a net drag on opensource development. He proposes what I’ll dub “Hasler’s Law”: the costs of duplicated work tend to scale sub-qadratically with team size – that is, more slowly than the planning and management overhead that would be needed to eliminate them.”
+
   * Note: I don’t know what this means, but I am just putting it here to decipher it later. 
 
   * “Wake me up when it’s done.” Is better than forcing code out premature. 
@@ -175,11 +205,15 @@ Don’t be too focused in on see such that you don’t miss the real prize.
   * “Cathedrals and bazaars and other social structures can catch lighting and refine it, but they cannot make it on demand.” 
 > “Organizations which design systems are constrained to produce designs which are copies of the communication structures of these organizations.” 
 > -- <cite>Conway’s Law</cite>
+
 I.e.
+
 > “The means determine the ends”
+
 > “Process becomes product”.
+
 > “True communication is possible only between equals, because inferiors are more consistently rewarded for telling their superiors pleasant lies than for telling the truth.” 
 > -- <cite>SNAFU Principle</cite>
 
-* Much Better conlusion
+* Much Better Conlusion
 > “The way this plays out in conventional software development is easy to see; there are strong incentives for the inferiors to hide, ignore, and minimize problems. When this process becomes product, software is a disaster. “
