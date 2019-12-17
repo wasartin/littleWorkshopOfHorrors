@@ -5,7 +5,7 @@
   * Software is a way to quickly and easily change the behavior of a machine. But that flexibility depends on the shape of the system. 
   * The goal of Architecture is to create a shape for the sys that caters to the policy at the most important part of the system while making the implementation irrelevant. This allows those details to be delayed, and figured out later or by someone else. 
 
-*Goal
+* Goal
 > “Is to minimize the human resources required to build & maintain the required system.”
 
 * What is the Theme of Arch?
