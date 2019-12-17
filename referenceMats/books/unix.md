@@ -1,7 +1,7 @@
 # Notes from Unix Philosophy and The Cathedral vs the Bazaar
 
 ### 17 Rules of Unix Programming Philosophy 
-01. Modularity: Write simple parts connected by clean interfaces.
+01. **Modularity**: Write simple parts connected by clean interfaces.
 
 02. Clarity: Clarity is better than cleverness.
 
@@ -39,9 +39,9 @@
 ### Summary of Catherdral vs Bazaar:
 
 - Abstract
-* Cathedral:= model of commercial world
-* Bazaar:= model of linux world. 
-* Listing loosely correlated theories & ideas.
+  * Cathedral:= model of commercial world
+  * Bazaar:= model of linux world. 
+  * Listing loosely correlated theories & ideas.
 
 -The Cathedral & the Bazaar
 * Linux an inherent tendency to destabilize the established system.
