@@ -1,7 +1,7 @@
 # Notes from Eric Raymond
-## The Art of UNIX Programming and The Cathedral vs the Bazaar
+###### The Art of UNIX Programming and The Cathedral vs the Bazaar
 
-## The Art of UNIX Programming
+## The Art of UNIX Programming Book
 ### 17 Rules of Unix Programming Philosophy 
 01. **Modularity**: Write simple parts connected by clean interfaces.
 
@@ -38,10 +38,9 @@
 17. **Extensibility**: Design for the future, because it will be here sooner than you think.
 
 
-## The Cathedral and the Bazaar (essay with 1999 update)
+## Lessons from The Cathedral and the Bazaar
 
 ## Lessons 
-Lessons
 01. **Lesson 1**: “Every good work of software starts by scratching a developer’s personal itch”
 02. **Lesson 2**: “ Good programmers know what to write. Great ones know what to rewire (& reuse)”
 03. **Lesson 3**: “Plan to throw one away: you will anyhow.” (Fred Brooks. The MMM)
@@ -63,7 +62,8 @@ Lessons
 19. **Lesson 19**: “Provided the development coordinator has a medium at least as good as the Internet, and knows how to lead without coercion, many heads are inevitably better than one."
 
 
-### Notes while reading Catherdral vs Bazaar by Eric Raymond:
+### Notes while reading The Cathedral vs the Bazaar:
+##### by Eric Raymond
 - Abstract
   * Cathedral:= model of commercial world
   * Bazaar:= model of linux world. 
