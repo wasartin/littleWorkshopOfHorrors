@@ -51,6 +51,13 @@ Man Page Stuff:
 getting stuff from files from ssh
 	scp <login>@<hostname>:"<path-to-files" <target-path-on-your
 		-machine>
+		
+transfer stuff from your computer into another
+	#go to the directory of the stuff you have
+	$sftp username@hostname
+	#go to the directory you want the stuff to
+	$put something.tar
+	#should be good. try to make the file a .tar or something
 ==================================================================
 --------------------------Networking------------------------------
 ==================================================================
@@ -107,25 +114,44 @@ Listing recently downloaded stuff
 -------------------------------C----------------------------------
 ==================================================================
 GDB
-	gdb <your-program-executable>
-	break <line #>
-	run <insert-any-args>
-	s 		#step one line of code, goes into functions if needed
-	next	#stepoing into functions
-	print <variable-name>	#shows value
-	
-	EX:
-		gdb rlg327
-		break 443
-		break 580
-		run --load
 
-		
+reference:= https://www.howtoforge.com/tutorial/how-to-debug-c-programs-in-linux-using-gdb/
+
+open terminal
+   $gdb <your program executable>
+   $break <whatever line you want to break at> 
+   $run <arguments>
+   $s #step one line of code, going into functions if needed
+   $next #step without going into functions
+   $print <variableName> #this is to see the value
+
+   #Example 
+   $gdb rlg327
+   $break 443
+   $break 580
+   $run --load
+   
+  https://cal-linux.com/tutorials/vectors.html
+
+Running gdb that requires User Input : using two terminals
+   #On Terminal 1
+      $./programName
+   #On Terminal 2
+      $ps -a | grep programName	    #Displays the PID
+   #On Terminal 2
+      $gdb -p <PID>
+     
+Valgrind Debugging
+   #Good to know switches
+   $valgrind -v --track-origins=yes --show-leak-kinds=all --leak-check=full --log-file=valgrind.log ./programName
+      #v:= verbose
+      #--log-file=<arg>:=Valgrind sends all of its messages to the spec file
 ==================================================================
 ----------------------------EMACS---------------------------------
 ==================================================================
 	show row/column 
 		(setq column-number-mode t)
+
 ==================================================================
 -----------------------------MISC---------------------------------
 ==================================================================		
