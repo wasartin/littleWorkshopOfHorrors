@@ -77,20 +77,3 @@ When you want to merge two repos, and keep the history.
 	$git add .
 	$git commit -m "<a-great-commit-message>"
 	$git push
-
-
-
-
-
-
-
-
-/c/Users/watis/ISU/prevClasses/programming/cs319/hw/four
-
-
-/C/Users/watis/ISU/prevClasses/programming/cs319/HW/three
-
-
-
-
-
