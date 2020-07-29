@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<!-- Button for copy contents to clipboard -->
+	</br>
+	<input name="textBox"  id="textBox" type="text" />
+	<button type="button" onclick="loadXMLStringToTree(document.getElementById('textBox').value)">Text Box To XML Tree</button>
+	<table id="demo"></table>
+	<input name="selectedFile"  id="selectedFile" type="file" />
+	<button type="button" onclick="loadXMLDocToTree(document.getElementById('selectedFile').value)">Go</button>
+	<!-- Button for show JSON -->
+
+	<br></br>
+	<script src="formatData.js">
+	</script>
+	<button type="button" onclick="loadXMLStringToTree(document.getElementById('textBox').value)">Text Box To XML Tree</button>
+	<br></br>
+  <!-- Results -->
+  <div id="xmlResultTree">
+    <ul id="XMLTree"> </ul>
+  </div>
+</body>
+</html>
