@@ -1,0 +1,46 @@
+  
+/* header & logo begining */
+
+	header		{
+			
+
+			text-align: center;
+			}
+
+	nav		{
+			margin-top: -0.3em;
+			margin-right: 80px;
+			margin-left: 80px;
+			font-size: 1.8em;
+			word-spacing: 15px;
+			
+			}
+
+	nav	li	{
+			display: inline;
+			}
+
+	li.to		{
+			word-spacing: 2px;
+			}
+
+	nav ul		{
+			text-align: center;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			background-color: #6E746E;
+			
+			}
+
+
+
+	ul	a:link	{
+			color: black;
+			}
+
+	ul	a:hover	{
+			color: #472400;
+			}
+
+/* End of Header & Logo */

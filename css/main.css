@@ -1,0 +1,247 @@
+<style>
+
+/* Start of Tree Structure  */
+  ul, #XMLTree {
+    list-style-type: none;
+  }
+
+  #XMLTree {
+    margin: 0;
+    padding: 0;
+  }
+
+  .caret {
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none;
+  }
+
+  .caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+  }
+
+  .caret-down::before {
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Safari */'
+    transform: rotate(90deg);
+  }
+  .nested {
+    display: none;
+  }
+
+  .active {
+    display: block;
+  }
+
+  /*End of Tree Structure */
+
+
+      /* start of primary content */
+
+      .dropBox {
+      margin-top: 0.5%;
+      margin-left: 1%;
+      margin-bottom: 0.5%;
+      padding-left: 0.5%;
+      padding-right: 0.5%;
+      padding-top: -0.5%;
+      height: 100%;
+      width: 70%;
+      float: left;
+      clear: auto;
+      background-position:center;
+      background-opacity: 28%;
+      border: 2px solid black;
+      font-size: 0.9em;
+      }
+      /* End of primary content */
+
+      /* Begining of topright Bio */
+
+      aside {
+      float: right;
+      width: 25%;
+      margin-left: 2%;
+      margin-top: -3%;
+      }
+
+      /* End of topright Bio */
+
+      /* Language Tag */
+      .languageTag {
+      background-color: #ddd;
+      border: none;
+      color: black;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 16px;
+      font-size: 0.7em;
+      }
+
+      /*End of Langauge Tag */
+
+	  /* Role Tag */
+      .roleTag {
+      background-color: #F5FFFA;
+      border: none;
+      color: black;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 16px;
+      font-size: 0.7em;
+      }
+
+      /*End of Role Tag */
+
+
+  	body {
+	font-size: 1.2em;
+
+	background-attachment:fixed;
+	background-position:center;
+	font-family: times new roman, sans-serif;
+	}
+
+	a:link {
+	color: black;
+	}
+
+	a:visited {
+	color: #754719;
+	}
+
+	ul a:hover {
+	color: #E6E6E6;
+	}
+
+/* header & logo begining */
+
+
+	header {
+	text-align: center;
+	}
+
+
+/* Begining of footer*/
+
+
+	footer {
+	margin-top: 50px;
+	margin-left: 200px;
+	margin-right: 200px;
+	padding-top: 0.3%;
+	padding-bottom: 0.5%;
+	font-size: 1.2em;
+	word-spacing: 15px;
+
+	clear: both;
+	}
+
+	footer ul {
+	text-align: center;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	}
+
+	footer	li {
+	display: inline;
+	}
+
+	li.space {
+	word-spacing: 2px;
+	}
+
+/* End of footer */
+
+/* Start of Project images*/
+
+	.responsiveImage{
+		width: 50%;
+		height: auto;
+	}
+
+	.image-container {
+		text-align: center;
+	}
+	.umlImage{
+		padding: 5;
+		max-width: 75%;
+		height: auto;
+	}
+/* End of Project Images */
+
+
+/* Card */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.team-column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+  width: 100%;
+  display: block;
+  }
+}
+
+.card-block {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.picture-container {
+  padding: 0 16px;
+}
+
+.picture-container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.team-title {
+  color: grey;
+}
+
+.team-button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.team-button:hover {
+  background-color: #555;
+}
+
+
+</style>
