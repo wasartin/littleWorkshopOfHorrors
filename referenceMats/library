@@ -1,0 +1,16 @@
+
+
+********************************************************************************
+-------------------------------I don't know yet---------------------------------
+********************************************************************************
+
+Mockito
+   Mock an inner class's functionality
+      OuterClass.InnerClass builder = new OuterClass.InnerClass();
+      Mockito.doNothing().when(builder).<name-of-method>
+
+      builder.<name-of-method>
+
+      Mockito.verify(builder, Mockito.atMost(<x>).<name-of-method>
+				       #where x is a number
+
