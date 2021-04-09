@@ -7,7 +7,7 @@ sudo apt install gcc
 sudo apt install g++
 
 
-Emacs file I need, 
+; Make .emacs.d/init.el
 
 ;show column number and row
 (setq column-number-mode t)
