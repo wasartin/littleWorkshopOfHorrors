@@ -77,3 +77,7 @@ When you want to merge two repos, and keep the history.
 	$git add .
 	$git commit -m "<a-great-commit-message>"
 	$git push
+	
+Remove Files in Git Repo----------------------------------------
+Cause this always happens to people
+	git rm <file-name> --cached
