@@ -1,0 +1,12 @@
+function gitClean(){
+  git stash
+  git stash clear
+}
+
+
+alias ls="ls -la"
+alias mkdir="mkdir -p"
+
+alias got="git"
+alias emasc="emacs"
+alias bake="make"
