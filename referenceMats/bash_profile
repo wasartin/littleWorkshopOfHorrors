@@ -1,12 +1,15 @@
-function gitClean(){
+function gitStashAndClear(){
   git stash
   git stash clear
 }
 
 
-alias ls="ls -la"
-alias mkdir="mkdir -p"
+alias gitClean=gitStashAndClear
+alias ls='ls -la'
+alias mkdir='mkdir -p'
+alias kube='kubectl'
+alias reloadBash='. ~/.bash_profile'
 
-alias got="git"
-alias emasc="emacs"
-alias bake="make"
+alias got='git'
+alias emasc='emacs'
+alias bake='make'
