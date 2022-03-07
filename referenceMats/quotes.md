@@ -12,7 +12,6 @@
 >“Data Dominates. If you’ve chosen the right data structures and organized things well, the algorithms will always be self evident. Data structures, not algorithms are central to programming” 
 > -- <cite>Rob Pike</cite>
 
-
 When checking for failure:
 
 >"If you're an application developer, you're best option is probably to terminate (gracefully). If you're a library developer, you return an error and allow your user to decide what to do about it"
@@ -21,3 +20,6 @@ When checking for failure:
 What does the Client Server Pattern do?
 >"The Server Serves, and the Client Cli's"
 > -- <cite> Grayson Cox </cite>
+
+>“Make it run, then make it right, then make it fast” 
+> -- <cite>Kent Beck</cite>
