@@ -5,6 +5,7 @@ function gitStashAndClear(){
 
 
 alias gitClean=gitStashAndClear
+alias gitUpdate='git checkout master && git pull && git checkout - && git merge master'
 alias ls='ls -la'
 alias mkdir='mkdir -p'
 alias kube='kubectl'
